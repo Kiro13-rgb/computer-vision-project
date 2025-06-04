@@ -1,0 +1,14 @@
+# Исключаем виртуальное окружение
+venv/
+
+# Исключаем папки с большими данными
+Pose-Integrated-Firearm-Detection-Dataset-4/
+
+# Python
+__pycache__/
+*.py[cod]
+*.log
+
+# IDE (VSCode, PyCharm и т. д.)
+.vscode/
+.idea/
