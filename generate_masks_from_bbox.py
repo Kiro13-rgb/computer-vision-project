@@ -54,10 +54,10 @@ def extract_bbox_masks_from_coco(data_root: str, split: str = "train"):
         for bbox in bboxes:
             # bbox = [x, y, width, height]
             x, y, bw, bh = bbox
-            x1 = int(x)
-            y1 = int(y)
-            x2 = int(min(x + bw, w - 1))
-            y2 = int(min(y + bh, h - 1))
+            x1 = int(x, 0)
+            y1 = int(y, 0)
+            x2 = int(min(x + bw - 1, w - 1))
+            y2 = int(min(y + bh - 1, h - 1))
             cv2.rectangle(mask, (x1, y1), (x2, y2), color=255, thickness=-1)
 
         base_name = os.path.splitext(filename)[0]
